@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Mini Navegador</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    
+  </head>
+  <body>
+    
+    <!-- <main>
+        <header>
+            <div class="close-area">
+                <input placeholder="https://..." value="https://mariosouto.com">
+            </div>
+        </header>
+        <iframe src="https://mariosouto.com"></iframe>
+    </main> -->
+  </body>
+
+  <script>
+    /*Aba do Navegador*/
+    var aba1 = {
+      titulo: 'TITULO DA ABA1',
+      url: 'https://www.google.com/'
+    }
+    var aba2 = {
+      titulo: 'TITULO DA ABA2',
+      url: 'https://www.totvs.com/'
+    }
+    var aba3 = {
+      titulo: 'TITULO DA ABA3',
+      url: 'file:///C:/TOTVS/Workspace/puc-pos/codigo-da-aula/03-minibrowser/index.html'
+    }
+
+    var abas = [
+      aba1,
+      aba2,
+      aba3
+    ];
+
+    for (aba of abas) {
+      var valorAtualDoHTML = document.body.innerHTML;
+      document.body.innerHTML = valorAtualDoHTML + `<li><a href="${aba.url}">${aba.titulo}<a/></li>`
+    }
+    
+    </script>
+</html>
+
